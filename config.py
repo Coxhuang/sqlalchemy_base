@@ -6,4 +6,23 @@
 @IDE  ： PyCharm
 """
 
+from enum import Enum
 
+class EnumBase(Enum):
+    pass
+
+class MysqlEnum(EnumBase):
+
+    NAME = "oracle_sd"
+    USERNAME = "root"
+    PASSWORD = "root"
+    HOST = "127.0.0.1"
+    PORT = 3306
+
+class OracleEnum(EnumBase):
+
+    NAME = "trunk_admin"
+    USERNAME = "root"
+    PASSWORD = "root"
+    HOST = "127.0.0.1"
+    PORT = 3306
