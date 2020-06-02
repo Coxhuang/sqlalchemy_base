@@ -11,26 +11,33 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
-class Teacher(Base):
-    __tablename__ = 'teacher'
-    id = Column(Integer, primary_key=True)
-    name = Column(String(12))
-    age = Column(String(2))
-    city = Column(String(16))
+class T_CRANE_INFO_4V_Model(Base):
 
-# Base.metadata.create_all(engine)
-# engine = create_engine('oracle://system:oracle@192.168.3.195:1521/TEST', echo=True)
-engine = create_engine("oracle://scott:tiger@192.168.3.195:1521/XE")
-Database= sessionmaker(bind=engine)
+    __tablename__ = 'T_CRANE_INFO_4V'
+    ID = Column(Integer, primary_key=True, autoincrement = True)
+    CRANE_ID = Column(String(12))
+    LANE_NO = Column(String(2))
+    INSERT_TIME = Column(String(16))
+    UPDATE_TIME = Column(String(16))
+    BAY1 = Column(String(16))
+    BAY2 = Column(String(16))
+    BAY3 = Column(String(16))
+    VESSEL_DIRECTION = Column(String(16))
+    BERTH = Column(String(16))
 
-# 把当前的引擎绑定给这个会话
-Session = sessionmaker(bind=engine)
 
-# 实例化
-session = Session()
 
 
 if __name__ == '__main__':
+    # engine = create_engine("dialect+driver://username:password@host:port/database")
+    engine = create_engine('oracle://cox:cox123456@127.0.0.1:49161/XE', echo=True)
+    Database = sessionmaker(bind=engine)
+
+    # 把当前的引擎绑定给这个会话
+    Session = sessionmaker(bind=engine)
+
+    # 实例化
+    session = Session()
     # db = Database()
     # query = db.query(Teacher)
     # print(query)

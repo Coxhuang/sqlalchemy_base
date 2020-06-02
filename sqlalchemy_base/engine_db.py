@@ -12,21 +12,21 @@ from sqlalchemy_base.data import data_obj
 # engine = create_engine('oracle://username:password@192.168.1.6:1521/databasename', echo=True)
 # engine = create_engine("mysql+pymysql://root:123@172.16.153.160:3306/dbname?charset=utf8mb4",echo=True,max_overflow=5)
 
-# engine = create_engine(
-#     "{}://{}:{}@{}:{}/{}?charset=utf8mb4".format(
-#         data_obj.db_type,
-#         data_obj.db_username,
-#         data_obj.db_password,
-#         data_obj.db_host,
-#         data_obj.db_port,
-#         data_obj.db_name,
-#     ),
-#     echo=True,
-#     max_overflow=5)
+engine = create_engine(
+    "{}://{}:{}@{}:{}/{}?charset=utf8mb4".format(
+        data_obj.db_type,
+        data_obj.db_username,
+        data_obj.db_password,
+        data_obj.db_host,
+        data_obj.db_port,
+        data_obj.db_name,
+    ),
+    echo=True,
+    max_overflow=5)
 
 # engine = create_engine("oracle://TEST:TEST123@127.0.0.1:49161/TEST")
 # engine = create_engine("oracle://system:oracle@127.0.0.1/TEST",encoding='utf-8', echo=True)
-engine = create_engine('oracle://system:oracle@192.168.3.195:1521/TEST', echo=True)
+# engine = create_engine('oracle://TEST:TEST123@127.0.0.1:1521/TEST', echo=True)
 
 
 

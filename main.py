@@ -6,14 +6,9 @@
 @IDE  ： PyCharm
 """
 from app.models import Base
-from sqlalchemy_base.engine_db import engine, session
-from app.models import Teacher
+from sqlalchemy_base.engine_db import engine
 
 if __name__ == "__main__":
     Base.metadata.create_all(engine)
-    session.add(Teacher(name='shark2',
-                        age='18',
-                        city='ZhengZhou'))
-    session.commit()
 
 
