@@ -21,8 +21,8 @@ class MysqlEnum(EnumBase):
 
 class OracleEnum(EnumBase):
 
-    NAME = "trunk_admin"
-    USERNAME = "root"
-    PASSWORD = "root"
+    NAME = "XE"
+    USERNAME = "cox"
+    PASSWORD = "cox123456"
     HOST = "127.0.0.1"
-    PORT = 3306
+    PORT = 49161

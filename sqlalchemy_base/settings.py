@@ -7,4 +7,4 @@
 """
 
 DEV_EVN = "dev" # dev: 开发环境, test: 测试环境, prod: 生产环境
-DB_TYPE = "mysql" # mysql / oracle
+DB_TYPE = "oracle" # mysql / oracle
